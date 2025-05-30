@@ -17,5 +17,19 @@
       <a href="#about">Въздух</a>
       <a href="#about">Слънчева</a>
     </div>
+    <div class="mainIframe">
+      <iframe src="/pages/mainpage.html"></iframe>
+    </div>
+    <script>
+    function updateIframeSrc(iframeId, newPath) {
+      const iframe = document.getElementById(iframeId);
+      if (iframe && iframe.tagName === 'IFRAME') {
+        iframe.src = newPath;
+      } else {
+        console.error(`Element with ID "${iframeId}" is not a valid iframe.`);
+      }
+    }
+
+  </script>
   </body>
 </html>
