@@ -28,3 +28,9 @@
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
 }
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
