@@ -14,7 +14,7 @@
     <script src="index.js"></script>
     <h1 class="obj_center_align">Изберете чистата енергия, за която искате да прочетете днес.</h1>
       <div class="card_container_1 center" style="display:flex; flex-direction: row;">
-      <div class="card obj_round_corner" style="color: white;">
+      <div class="card obj_round_corner" style="color: white;" onclick="parent.updateIframeSrc('page_content_iframe', '/pages/water.html')">
         <img 
           src="/images/hidroelectic_dam.webp" 
           alt="Hidroelectic dam image" 
@@ -24,7 +24,7 @@
           <p>Генериране на енергия чрез реки.</p>
         </div>
       </div>
-      <div class="card obj_round_corner" style="color: white;">
+      <div class="card obj_round_corner" style="color: white;" onclick="parent.updateIframeSrc('page_content_iframe', '/pages/wind.html')">
         <img 
           src="/images/wind.jpg" 
           alt="Wind generator" 
@@ -34,11 +34,11 @@
           <p>Генериране на енергия чрез проперели.</p>
         </div>
       </div>
-      <div class="card obj_round_corner" style="color: white;">
+      <div class="card obj_round_corner" style="color: white;" onclick="parent.updateIframeSrc('page_content_iframe', '/pages/solar.html')">
         <img 
-          src="/images/solar_panel.jpg" 
+          src="/images/solar_panel.jpg"
           alt="Solar panel" 
-          style="object-fit: cover;">
+          style="object-fit: cover;" class="no_smooth center-img">
         <div class="container">
           <h4><b>Слънчева</b></h4>
           <p>Генериране на енергия чрез фотони, приети от соларни панели и други.</p>
@@ -46,11 +46,11 @@
       </div>
     </div>
     <div class="card_container_2 center" style="display:flex; flex-direction: row;">
-      <div class="card obj_round_corner" style="color: white;">
+      <div class="card obj_round_corner" style="color: white;" onclick="parent.updateIframeSrc('page_content_iframe', '/pages/nuclear.html')">
       <img 
-        src="" 
-        alt="" 
-        style="object-fit: cover;">
+        src="/images/nuclear.png" 
+        alt="Nuclear reactor turbine steam output. Drone shot" 
+        style="object-fit: cover;" class="no_smooth center-img" height="62%;">
         <div class="container">
           <h4><b>Ядрена</b></h4>
           <p>Генериране на енергия чрез разделяне на атоми от радиоактивни елементи.</p>
@@ -58,4 +58,4 @@
       </div>
     </div>
   </body>
-</html>
+</html> 
