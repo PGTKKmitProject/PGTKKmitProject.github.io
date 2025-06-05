@@ -6,4 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(136deg, rgba(0, 150, 209, 1) 0%, rgba(102, 26, 143, 1) 100%);
+    transition: 0.3s;
+}
+
+.navigation_selector {
+    display: flex;
+    flex-direction: row;
 }
