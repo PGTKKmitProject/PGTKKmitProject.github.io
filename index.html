@@ -10,20 +10,24 @@
   </head>
   <body>
     <div class="topnav">
-      <a class="active" href="#home">Начало</a>
-      <a href="#news">Термична</a>
-      <a href="#contact">Ядрена</a>
-      <a href="#about">Вода</a>
-      <a href="#about">Въздух</a>
-      <a href="#about">Слънчева</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/mainpage.html')">Начало</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/thermal.html')">Термична</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/nuclear.html')">Ядрена</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/water.html')">Вода</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/wind.html')">Въздух</a>
+      <a onclick="updateIframeSrc('page_content_iframe', '/pages/solar.html')">Слънчева</a>
     </div>
-    <div class="mainIframe">
-      <iframe src="/pages/mainpage.html" style="width: 100vw; height: 92vh;"></iframe>
-    </div>
+    <iframe id="page_content_iframe" src="pages/mainpage.html" title="page_content_iframe" style="height:95vh; width: 100vw; border:none; margin-top: 1vh;" marginwidth="10"  
+        marginheight="0" 
+        hspace="0" 
+        vspace="0" 
+        frameborder="0" 
+        scrolling="yes"></iframe>
+  </body>
     <script>
     function updateIframeSrc(iframeId, newPath) {
       const iframe = document.getElementById(iframeId);
-      if (iframe && iframe.tagName === 'Ihttp://127.0.0.1:8080FRAME') {
+      if (iframe && iframe.tagName === 'IFRAME') {
         iframe.src = newPath;
       } else {
         console.error(`Element with ID "${iframeId}" is not a valid iframe.`);
