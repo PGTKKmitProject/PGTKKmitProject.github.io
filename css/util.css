@@ -11,6 +11,13 @@
     overflow: hidden;   
 }
 
+.obj_center_2_axis {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;    /* vertical center */
+  height: 100vh;          /* full viewport height */
+}
+
 /* General class to disable anti-alliasing for images */
 .no_smooth { 
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
