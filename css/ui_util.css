@@ -14,3 +14,25 @@
     display: flex;
     flex-direction: row;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    height: 100vh;      /* Fill full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Common styling for both grid cells */
+.grid-item {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Optional: distinct backgrounds */
+.left {
+    background-color: #f2f2f2;
+}
+.right {
+    background-color: #ffffff;
+}
