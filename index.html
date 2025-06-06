@@ -36,5 +36,57 @@
     }
 
   </script>
+  <script>
+  // As soon as the DOM is ready, check for a phone in “mobile” mode
+  document.addEventListener('DOMContentLoaded', function() {
+    var ua = navigator.userAgent || '';
+  
+    // Detect “phone in mobile mode” by looking for “Mobi” in the UA string.
+    // Chrome-for-Android in desktop mode omits “Mobi”, so it will not trigger.
+    var isMobilePhone = /Mobi/.test(ua);
+
+    if (isMobilePhone) {
+      // Create overlay element
+      var overlay = document.createElement('div');
+      overlay.id = 'mobile-warning-overlay';
+      Object.assign(overlay.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.85)',
+        color: '#ffffff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: '1rem',
+        zIndex: '9999',
+        fontFamily: 'sans-serif',
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        boxSizing: 'border-box'
+      });
+
+      // Insert your message (you can adjust wording as needed)
+      overlay.innerHTML = 
+        '<div>' +
+          '<strong>Mobile Phones Not Supported</strong><br>' +
+          'This site is not intended for use on mobile phones in mobile mode.<br>' +
+          'If you are using Chrome on Android, please enable <em>“Request Desktop Site”</em> and reload.' +
+        '</div>';
+
+      // Prevent any interaction with the underlying page
+      overlay.addEventListener('click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }, true);
+
+      // Append overlay to <body>
+      document.body.appendChild(overlay);
+    }
+  });
+  </script>
   </body>
 </html>
